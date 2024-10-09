@@ -123,7 +123,7 @@ class VarianceDecomposition:
         """
         n = len(effect)
         lines = [[""] + ["MS", "Prob(F)"] * n + ["propotion"]]
-        propotion = [SS_effect[i] / sum(SS_effect) for i in range(n)]
+        propotion = [SS_effect[i] / self._vardecomp.SSy for i in range(n)]
         r2 = [sum(SS_effect[: i + 1]) / self._vardecomp.SSy for i in range(n)]
 
         # handle effect line
