@@ -78,8 +78,11 @@ class VarianceDecomposition:
         if not set(effect).issubset(set(allow_eff)):
             msg = "Invalid effect, only `a`, `d`, `aa`, `ad`, `dd` are allowed."
             raise ValueError(msg)
-        if len(effect) != 4:
-            msg = "the number of effect should be equal to the number of 4(`m` is not needed)."
+        if len(effect) > 5:
+            msg = (
+                "The number of effect should be less than the df of the model(5 here)."
+                f" but got {len(effect)} effect"
+            )
             raise ValueError(msg)
         return effect
 

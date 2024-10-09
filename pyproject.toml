@@ -4,7 +4,7 @@ dependencies = ["numpy", "pandas", "statsmodels", "scipy"]
 description = "Simple package for quantitative genetic analysis."
 name = "quangpy"
 requires-python = ">= 3.11"
-version = "0.1.1"
+version = "0.1.2"
 readme = { file = "README.md", content-type = "text/markdown" }
 license = { file = "LICENSE" }
 classifiers = [
