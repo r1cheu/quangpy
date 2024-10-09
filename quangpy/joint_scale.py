@@ -106,12 +106,19 @@ class JointScale:
         """
         lines = [["", "coef", "std err", "P>|t|"]]  # header
         for i in result.model.exog_names:  # for each effect
+            sig = (
+                "**"
+                if result.pvalues[i] < 0.01
+                else "*"
+                if result.pvalues[i] < 0.05
+                else ""
+            )
             lines.append(
                 [
                     i,
                     f"{result.params[i]:.4f}",
                     f"{result.bse[i]:.4f}",
-                    f"{result.pvalues[i]:.4f}",
+                    f"{result.pvalues[i]:.4f}{sig}",
                 ]
             )
         chi_result = [f"{i:.4f}" for i in self._chi_prob(result)]

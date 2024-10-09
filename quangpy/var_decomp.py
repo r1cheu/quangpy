@@ -130,8 +130,9 @@ class VarianceDecomposition:
                 _line.extend([""] * 2)  # add empty cells
 
             for p in f_prob[idx:]:
+                sig = "**" if p[idx] < 0.01 else "*" if p[idx] < 0.05 else ""
                 _line.extend(
-                    [f"{SS_effect[idx]:.2f}", f"{p[idx]:.4f}"]
+                    [f"{SS_effect[idx]:.2f}", f"{p[idx]:.4f}{sig}"]
                 )  # add SS and p-value
 
             _line.append(f"{propotion[idx]:.4f}")  # add propotion

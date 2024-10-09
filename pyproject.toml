@@ -4,10 +4,9 @@ dependencies = ["numpy", "pandas", "statsmodels", "scipy"]
 description = "Simple package for quantitative genetic analysis."
 name = "quangpy"
 requires-python = ">= 3.11"
-version = "0.1.0"
+version = "0.1.1"
 readme = { file = "README.md", content-type = "text/markdown" }
 license = { file = "LICENSE" }
-keywords = ["egg", "bacon", "sausage", "tomatoes", "Lobster Thermidor"]
 classifiers = [
   "Development Status :: 4 - Beta",
   "Programming Language :: Python",
@@ -26,7 +25,7 @@ platforms = ["linux-64"]
 dev = ["pre-commit"]
 
 [tool.pixi.pypi-dependencies]
-quantpy = { path = ".", editable = true }
+quangpy = { path = ".", editable = true }
 
 [tool.pixi.tasks]
 
@@ -53,9 +52,6 @@ dev = { features = ["dev"], solve-group = "default" }
 [tool.pixi.feature.jupyter.tasks]
 jupyter = "jupyter lab --port 8000"
 
-
-[tool.ruff]
-src = ["python/phenx"]
 
 [tool.ruff.lint]
 extend-select = [

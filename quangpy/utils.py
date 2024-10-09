@@ -49,7 +49,7 @@ def print_list(data):
 
     for out_idx, row in enumerate(data):
         for idx, col in enumerate(row):
-            print(f"{col:>{max_col_width[idx]}} ", end=" ")  # noqa:T201
+            print(f"{col:<{max_col_width[idx]}} ", end=" ")  # noqa:T201
         print()  # noqa:T201
         if out_idx == 0:
             print_split_line(max_col_width, "=")
