@@ -21,14 +21,17 @@ The input file should sep by tab and provide the following columns with the same
 - population: population name
 - mean: mean of the population phenotype
 - var: variance
-  e.g.
-  y var
-  b1l 7.5 0.010000000000000002
-  b1s 5.575 0.004096
-  f1 5.5 0.007395999999999999
-  f2 6.595 0.013923999999999999
-  p1 9.125 0.008281
-  p2 5.475 0.003249
+
+The following is an example of the input data format:
+
+|     | mean  | var                  |
+| --- | ----- | -------------------- |
+| b1l | 7.5   | 0.010000000000000002 |
+| b1s | 5.575 | 0.004096             |
+| f1  | 5.5   | 0.007395999999999999 |
+| f2  | 6.595 | 0.013923999999999999 |
+| p1  | 9.125 | 0.008281             |
+| p2  | 5.475 | 0.003249             |
 
 ### Joint Scale Analysis
 
