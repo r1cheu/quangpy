@@ -1,6 +1,8 @@
-# quangpy: Python package for Quantitative Genetics Analysis
+# quangpy: a python package for **q**uantitative **g**enetics analysis
 
-## Overview
+[![](https://img.shields.io/pypi/v/quangpy.svg?color=brightgreen)](https://pypi.org/pypi/quangpy/)
+[![](https://img.shields.io/github/issues/r1cheu/quangpy?color=green)](https://github.com/r1cheu/quangpy/issues/new)
+[![](https://img.shields.io/github/license/r1cheu/quangpy)]()
 
 `quangpy` mainly provides Joint Scale Analysis and Variance Decomposition Analysis.
 
@@ -15,23 +17,22 @@ pip install quangpy
 
 ### input data format
 
-prepare data should be sep by tab, as the following format with first column
-The input file should sep by tab and provide the following columns with the same order:
+The input file should be separated by tab and provide the following columns in the same order:
 
 - population: population name
 - mean: mean of the population phenotype
-- var: variance
+- var: variance of the population phenotype
 
 The following is an example of the input data format:
 
-|     | mean  | var                  |
-| --- | ----- | -------------------- |
-| b1l | 7.5   | 0.010000000000000002 |
-| b1s | 5.575 | 0.004096             |
-| f1  | 5.5   | 0.007395999999999999 |
-| f2  | 6.595 | 0.013923999999999999 |
-| p1  | 9.125 | 0.008281             |
-| p2  | 5.475 | 0.003249             |
+|     | mean  | var      |
+| --- | ----- | -------- |
+| b1l | 7.5   | 0.010000 |
+| b1s | 5.575 | 0.004096 |
+| f1  | 5.5   | 0.007396 |
+| f2  | 6.595 | 0.013924 |
+| p1  | 9.125 | 0.008281 |
+| p2  | 5.475 | 0.003249 |
 
 ### Joint Scale Analysis
 
@@ -54,3 +55,7 @@ input_data = "/path/to/input/data"
 vd = VarianceDecomposition(input_data)
 vd.fit(("m", "a", "d", "aa", "dd"))
 ```
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
