@@ -4,14 +4,13 @@ dependencies = ["numpy", "pandas", "statsmodels", "scipy"]
 description = "Simple package for quantitative genetic analysis."
 name = "quangpy"
 requires-python = ">= 3.11"
-version = "0.1.3"
+version = "0.1.4"
 readme = { file = "README.md", content-type = "text/markdown" }
 license = { file = "LICENSE" }
 classifiers = [
   "Development Status :: 4 - Beta",
   "Programming Language :: Python",
 ]
-
 
 [build-system]
 build-backend = "hatchling.build"
